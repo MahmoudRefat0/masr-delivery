@@ -1,0 +1,10 @@
+# restaurant|type|id|name|category|prepMinutes|priceOrDiscountFraction|comboParts|stock
+R1|standard|M1|Chicken Plate|Main dishes|20|120.00||1000
+R1|standard|M2|Rice|Sides|10|35.00||1000
+R1|weighted|M3|Grilled Kofta|Grill|25|400.00||100
+R1|combo|M4|Chicken and Rice Combo|Combos|20|0.10|M1:1,M2:1|0
+R2|standard|M1|Penne Arrabbiata|Pasta|15|110.00||1000
+R2|standard|M2|Garlic Bread|Sides|8|30.00||1000
+R2|combo|M3|Pasta Meal|Combos|15|0.15|M1:1,M2:1|0
+R3|standard|M1|Falafel Bowl|Bowls|12|85.00||1000
+R3|standard|M2|Fresh Juice|Drinks|5|40.00||1000

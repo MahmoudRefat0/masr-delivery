@@ -1,0 +1,487 @@
+Console test on Java 17 / Linux
+Verified: invalid options re-prompt; placement; wallet payment; full lifecycle; reports; observer audit.
+
+MASR DELIVERY | amounts in EGP | demo data loaded
+Customers: C1 Omar, C2 Salma. Restaurants: R1, R2, R3. Riders: D1, D2, D3.
+Riders start off duty. Pay an order before restaurant acceptance.
+
+1. Customer
+2. Restaurant
+3. Rider
+4. Admin & Reports
+0. Exit
+Choose: Choose a number from 0 to 4.
+Choose: Choose a number from 0 to 4.
+Choose: C1 | Omar | BRONZE | wallet 5000.00
+C2 | Salma | BRONZE | wallet 2500.00
+Customer ID: 
+CUSTOMER Omar | BRONZE | wallet 5000.00
+1. Browse restaurants
+2. Search
+3. View menu
+4. Place order
+5. Pay from wallet
+6. Track order
+7. Cancel order
+8. Order history
+9. Last five searches
+0. Back
+Choose: 1. R1 | Nile Kitchen | Maadi | [Egyptian, Grill] | 4.8
+2. R2 | Pasta Corner | Dokki | [Italian] | 4.6
+3. R3 | Green Bowl | Nasr City | [Healthy, Vegetarian] | 4.4
+Restaurant number: MENU | Nile Kitchen
+-- Main dishes --
+M1 - Chicken Plate | 120.00 EGP/each | preparation 20 min
+-- Sides --
+M2 - Rice | 35.00 EGP/each | preparation 10 min
+-- Grill --
+M3 - Grilled Kofta | 400.00 EGP/kg | preparation 25 min
+-- Combos --
+M4 - Chicken and Rice Combo | 139.50 EGP/each | preparation 20 min
+1. Address[district=Faisal, details=12 El Malek St]
+2. Address[district=Maadi, details=5 Road 9]
+Address number: Item ID (blank = finish): Quantity (kg for weighted items): Item ID (blank = finish): Promotion code (optional): Delivery notes (optional): [Customer C1] O000001 -> PLACED
+
+O000001 | Nile Kitchen | PLACED | 258.00 EGP | unpaid
+Chicken Plate x 2 = 240.00 EGP
+Subtotal: 240.00
+Delivery: 42.00
+Service: 24.00
+Promotion discount: 48.00
+TOTAL: 258.00 EGP
+Address: Address[district=Faisal, details=12 El Malek St] | distance 12 km
+Stock reserved. Use Pay from wallet before acceptance.
+
+CUSTOMER Omar | BRONZE | wallet 5000.00
+1. Browse restaurants
+2. Search
+3. View menu
+4. Place order
+5. Pay from wallet
+6. Track order
+7. Cancel order
+8. Order history
+9. Last five searches
+0. Back
+Choose: Order reference: Payment confirmed. Wallet: 4742.00 EGP
+
+CUSTOMER Omar | BRONZE | wallet 4742.00
+1. Browse restaurants
+2. Search
+3. View menu
+4. Place order
+5. Pay from wallet
+6. Track order
+7. Cancel order
+8. Order history
+9. Last five searches
+0. Back
+Choose: Order reference: 
+O000001 | Nile Kitchen | PLACED | 258.00 EGP | paid
+Chicken Plate x 2 = 240.00 EGP
+Subtotal: 240.00
+Delivery: 42.00
+Service: 24.00
+Promotion discount: 48.00
+TOTAL: 258.00 EGP
+Address: Address[district=Faisal, details=12 El Malek St] | distance 12 km
+Elapsed: 0 minute(s)
+PLACED at 2026-09-25T21:58:20.257974603+03:00[Africa/Cairo]
+
+CUSTOMER Omar | BRONZE | wallet 4742.00
+1. Browse restaurants
+2. Search
+3. View menu
+4. Place order
+5. Pay from wallet
+6. Track order
+7. Cancel order
+8. Order history
+9. Last five searches
+0. Back
+Choose: 
+1. Customer
+2. Restaurant
+3. Rider
+4. Admin & Reports
+0. Exit
+Choose: 1. R1 | Nile Kitchen | Maadi | [Egyptian, Grill] | 4.8
+2. R2 | Pasta Corner | Dokki | [Italian] | 4.6
+3. R3 | Green Bowl | Nasr City | [Healthy, Vegetarian] | 4.4
+Restaurant number: 
+RESTAURANT Nile Kitchen
+1. Accept order
+2. Reject pending order
+3. Mark preparing
+4. Mark ready
+5. Toggle item availability
+6. Add menu item
+7. Remove menu item
+8. Adjust available stock
+9. Today's orders and revenue
+10. Toggle open/closed
+11. View menu and stock
+0. Back
+Choose: Order reference: [Customer C1] O000001 -> ACCEPTED
+Updated.
+
+RESTAURANT Nile Kitchen
+1. Accept order
+2. Reject pending order
+3. Mark preparing
+4. Mark ready
+5. Toggle item availability
+6. Add menu item
+7. Remove menu item
+8. Adjust available stock
+9. Today's orders and revenue
+10. Toggle open/closed
+11. View menu and stock
+0. Back
+Choose: Order reference: [Customer C1] O000001 -> PREPARING
+Updated.
+
+RESTAURANT Nile Kitchen
+1. Accept order
+2. Reject pending order
+3. Mark preparing
+4. Mark ready
+5. Toggle item availability
+6. Add menu item
+7. Remove menu item
+8. Adjust available stock
+9. Today's orders and revenue
+10. Toggle open/closed
+11. View menu and stock
+0. Back
+Choose: Order reference: [Customer C1] O000001 -> READY
+Updated.
+
+RESTAURANT Nile Kitchen
+1. Accept order
+2. Reject pending order
+3. Mark preparing
+4. Mark ready
+5. Toggle item availability
+6. Add menu item
+7. Remove menu item
+8. Adjust available stock
+9. Today's orders and revenue
+10. Toggle open/closed
+11. View menu and stock
+0. Back
+Choose: 
+1. Customer
+2. Restaurant
+3. Rider
+4. Admin & Reports
+0. Exit
+Choose: D1 | Ahmed | motorcycle | Maadi | busy/off duty
+D2 | Mona | bicycle | Dokki | busy/off duty
+D3 | Karim | car | Nasr City | busy/off duty
+Rider ID: 
+RIDER Ahmed | district Maadi
+1. Go on duty
+2. Go off duty
+3. View active order
+4. Mark picked up
+5. Mark delivered
+6. Personal statistics
+7. Update district
+0. Back
+Choose: [Customer C1] O000001 -> ASSIGNED
+On duty. Dispatch checked.
+
+RIDER Ahmed | district Maadi
+1. Go on duty
+2. Go off duty
+3. View active order
+4. Mark picked up
+5. Mark delivered
+6. Personal statistics
+7. Update district
+0. Back
+Choose: 
+O000001 | Nile Kitchen | ASSIGNED | 258.00 EGP | paid
+Chicken Plate x 2 = 240.00 EGP
+Subtotal: 240.00
+Delivery: 42.00
+Service: 24.00
+Promotion discount: 48.00
+TOTAL: 258.00 EGP
+Address: Address[district=Faisal, details=12 El Malek St] | distance 12 km
+
+RIDER Ahmed | district Maadi
+1. Go on duty
+2. Go off duty
+3. View active order
+4. Mark picked up
+5. Mark delivered
+6. Personal statistics
+7. Update district
+0. Back
+Choose: [Customer C1] O000001 -> OUT_FOR_DELIVERY
+Picked up.
+
+RIDER Ahmed | district Maadi
+1. Go on duty
+2. Go off duty
+3. View active order
+4. Mark picked up
+5. Mark delivered
+6. Personal statistics
+7. Update district
+0. Back
+Choose: [Customer C1] O000001 -> DELIVERED
+Delivered.
+
+RIDER Ahmed | district Faisal
+1. Go on duty
+2. Go off duty
+3. View active order
+4. Mark picked up
+5. Mark delivered
+6. Personal statistics
+7. Update district
+0. Back
+Choose: RiderStats[id=D1, name=Ahmed, completed=1, averageDuration=Optional[PT0.00112227S]]
+
+RIDER Ahmed | district Faisal
+1. Go on duty
+2. Go off duty
+3. View active order
+4. Mark picked up
+5. Mark delivered
+6. Personal statistics
+7. Update district
+0. Back
+Choose: 
+1. Customer
+2. Restaurant
+3. Rider
+4. Admin & Reports
+0. Exit
+Choose: 
+ADMIN
+1. Add restaurant
+2. Remove restaurant
+3. Create promotion
+4. Reports
+5. Platform statistics
+6. Register customer
+7. Register rider
+0. Back
+Choose: 
+REPORTS
+1. Revenue by date range
+2. Top five restaurants by month
+3. Average order value per district
+4. Highly rated restaurants with 20+ deliveries
+5. Counts by status
+6. Rider statistics
+7. Most frequently ordered item
+8. Customer history
+9. Peak ordering hour
+10. Inactive customers
+0. Back
+Choose: {PLACED=0, ACCEPTED=0, PREPARING=0, READY=0, ASSIGNED=0, OUT_FOR_DELIVERY=0, DELIVERED=1, CANCELLED=0}
+
+REPORTS
+1. Revenue by date range
+2. Top five restaurants by month
+3. Average order value per district
+4. Highly rated restaurants with 20+ deliveries
+5. Counts by status
+6. Rider statistics
+7. Most frequently ordered item
+8. Customer history
+9. Peak ordering hour
+10. Inactive customers
+0. Back
+Choose: RiderStats[id=D1, name=Ahmed, completed=1, averageDuration=Optional[PT0.00112227S]]
+RiderStats[id=D2, name=Mona, completed=0, averageDuration=Optional.empty]
+RiderStats[id=D3, name=Karim, completed=0, averageDuration=Optional.empty]
+
+REPORTS
+1. Revenue by date range
+2. Top five restaurants by month
+3. Average order value per district
+4. Highly rated restaurants with 20+ deliveries
+5. Counts by status
+6. Rider statistics
+7. Most frequently ordered item
+8. Customer history
+9. Peak ordering hour
+10. Inactive customers
+0. Back
+Choose: PopularItem[key=R1/M1, name=Chicken Plate, orderCount=1]
+
+REPORTS
+1. Revenue by date range
+2. Top five restaurants by month
+3. Average order value per district
+4. Highly rated restaurants with 20+ deliveries
+5. Counts by status
+6. Rider statistics
+7. Most frequently ordered item
+8. Customer history
+9. Peak ordering hour
+10. Inactive customers
+0. Back
+Choose: Customer ID: O000001 | Nile Kitchen | DELIVERED | 258.00 EGP | paid
+Total spent (paid, excluding refunds): 258.00 EGP
+
+REPORTS
+1. Revenue by date range
+2. Top five restaurants by month
+3. Average order value per district
+4. Highly rated restaurants with 20+ deliveries
+5. Counts by status
+6. Rider statistics
+7. Most frequently ordered item
+8. Customer history
+9. Peak ordering hour
+10. Inactive customers
+0. Back
+Choose: 21:00
+
+REPORTS
+1. Revenue by date range
+2. Top five restaurants by month
+3. Average order value per district
+4. Highly rated restaurants with 20+ deliveries
+5. Counts by status
+6. Rider statistics
+7. Most frequently ordered item
+8. Customer history
+9. Peak ordering hour
+10. Inactive customers
+0. Back
+Choose: C2 | Salma
+
+REPORTS
+1. Revenue by date range
+2. Top five restaurants by month
+3. Average order value per district
+4. Highly rated restaurants with 20+ deliveries
+5. Counts by status
+6. Rider statistics
+7. Most frequently ordered item
+8. Customer history
+9. Peak ordering hour
+10. Inactive customers
+0. Back
+Choose: 
+ADMIN
+1. Add restaurant
+2. Remove restaurant
+3. Create promotion
+4. Reports
+5. Platform statistics
+6. Register customer
+7. Register rider
+0. Back
+Choose: Restaurants: 3 | Customers: 2 | Riders: 3
+Cuisines: [Egyptian, Grill, Healthy, Italian, Vegetarian]
+Orders: {PLACED=0, ACCEPTED=0, PREPARING=0, READY=0, ASSIGNED=0, OUT_FOR_DELIVERY=0, DELIVERED=1, CANCELLED=0}
+Dispatch queue:
+No records found.
+Rider dashboard: {D1=O000001 DELIVERED}
+Event statistics: {PLACED=0, ACCEPTED=0, PREPARING=0, READY=0, ASSIGNED=0, OUT_FOR_DELIVERY=0, DELIVERED=1, CANCELLED=0}
+Observer failures: []
+
+ADMIN
+1. Add restaurant
+2. Remove restaurant
+3. Create promotion
+4. Reports
+5. Platform statistics
+6. Register customer
+7. Register rider
+0. Back
+Choose: 
+1. Customer
+2. Restaurant
+3. Rider
+4. Admin & Reports
+0. Exit
+Choose: Goodbye.
+
+EMPTY REPORTS ON A FRESH RUN
+MASR DELIVERY | amounts in EGP | demo data loaded
+Customers: C1 Omar, C2 Salma. Restaurants: R1, R2, R3. Riders: D1, D2, D3.
+Riders start off duty. Pay an order before restaurant acceptance.
+
+1. Customer
+2. Restaurant
+3. Rider
+4. Admin & Reports
+0. Exit
+Choose: 
+ADMIN
+1. Add restaurant
+2. Remove restaurant
+3. Create promotion
+4. Reports
+5. Platform statistics
+6. Register customer
+7. Register rider
+0. Back
+Choose: 
+REPORTS
+1. Revenue by date range
+2. Top five restaurants by month
+3. Average order value per district
+4. Highly rated restaurants with 20+ deliveries
+5. Counts by status
+6. Rider statistics
+7. Most frequently ordered item
+8. Customer history
+9. Peak ordering hour
+10. Inactive customers
+0. Back
+Choose: No ordered item exists.
+
+REPORTS
+1. Revenue by date range
+2. Top five restaurants by month
+3. Average order value per district
+4. Highly rated restaurants with 20+ deliveries
+5. Counts by status
+6. Rider statistics
+7. Most frequently ordered item
+8. Customer history
+9. Peak ordering hour
+10. Inactive customers
+0. Back
+Choose: No orders exist.
+
+REPORTS
+1. Revenue by date range
+2. Top five restaurants by month
+3. Average order value per district
+4. Highly rated restaurants with 20+ deliveries
+5. Counts by status
+6. Rider statistics
+7. Most frequently ordered item
+8. Customer history
+9. Peak ordering hour
+10. Inactive customers
+0. Back
+Choose: 
+ADMIN
+1. Add restaurant
+2. Remove restaurant
+3. Create promotion
+4. Reports
+5. Platform statistics
+6. Register customer
+7. Register rider
+0. Back
+Choose: 
+1. Customer
+2. Restaurant
+3. Rider
+4. Admin & Reports
+0. Exit
+Choose: Goodbye.

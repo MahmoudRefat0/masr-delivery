@@ -1,0 +1,50 @@
+Built dist/masr-delivery.jar
+PASS exact assignment example
+PASS weighted price and fractional inventory
+PASS combo uses discounted components and reserves stock
+PASS aggregate combo and standalone stock shortage is atomic
+PASS unavailable combo component rejected
+PASS fractional standard count rejected
+PASS closed restaurant rejected
+PASS zero and negative quantities rejected
+PASS empty order and foreign address rejected
+PASS invalid mobile rating and price rejected
+PASS promo cap
+PASS fixed discount cannot consume fees
+PASS free delivery preserves service fee
+PASS expired promo rolls back placement
+PASS expiry date inclusive
+PASS minimum district and unknown code rejected
+PASS first-time restriction includes pending orders
+PASS piastre rounding uses decimal HALF_UP
+PASS insufficient wallet does not deduct
+PASS double payment rejected
+PASS cancel paid order refunds exactly once
+PASS unpaid rejection restores stock without refund
+PASS illegal lifecycle jumps and unpaid acceptance
+PASS complete lifecycle and no cancellation after pickup
+PASS assigned cancellation releases rider
+PASS rider cannot go off duty with active order
+PASS delivery base and loyalty thresholds
+PASS gold priority overrides older bronze READY order
+PASS FIFO follows READY time, not placement
+PASS vehicle range and district constrain dispatch
+PASS concurrent dispatch never double-books rider
+PASS concurrent final-stock reservations
+PASS concurrent payment deducts once
+PASS concurrent cancellation refunds once
+PASS bounded newest-first search history
+PASS predicate search sorting cuisines and menu order
+PASS immutable exposed collections
+PASS entity equality hash codes and duplicate IDs
+PASS empty analytics express absence
+PASS all ten reports on populated data
+PASS revenue excludes cancelled and pending orders
+PASS inactive boundary and never-ordered customers
+PASS factory and extension without pricing changes
+PASS observer isolation and fourth reaction
+PASS configuration singleton under concurrent access
+PASS historical price preserved after menu removal
+PASS restaurant removal protects active orders and history
+
+47 tests passed.
